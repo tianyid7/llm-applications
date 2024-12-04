@@ -34,3 +34,51 @@ ignore = ["E501", "W503", "E226"]
 
 [tool.pyupgrade]
 py39plus = true
+
+[tool.poetry]
+name = "lls-applications"
+version = "0.1.0"
+description = ""
+authors = ["Tianyi Deng <tdeng@blizzard.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "^0.3.7"
+jupyterlab = "^4.3.1"
+langchain-huggingface = "^0.1.2"
+langchain-openai = "^0.2.9"
+pip-system-certs = "^4.0"
+transformers = "^4.46.3"
+ray = "^2.40.0"
+beautifulsoup4 = "^4.12.3"
+rank-bm25 = "^0.2.2"
+fastapi = "^0.115.6"
+matplotlib = "^3.9.3"
+pre-commit = "^4.0.1"
+python-dotenv = "^1.0.1"
+seaborn = "^0.13.2"
+slack-bolt = "^1.21.2"
+streamlit = "^1.40.2"
+structlog = "^24.4.0"
+typer = "^0.15.0"
+
+
+[tool.poetry.group.vectordb.dependencies]
+asyncpg = "^0.30.0"
+pgvector = "^0.3.6"
+psycopg2-binary = "^2.9.10"
+sqlalchemy = {extras = ["asyncio"], version = "^2.0.36"}
+psycopg = {extras = ["binary", "pool"], version = "^3.2.3"}
+
+
+[tool.poetry.group.styling.dependencies]
+black = "^24.10.0"
+flake8 = "^7.1.1"
+flake8-pyproject = "^1.2.3"
+isort = "^5.13.2"
+pyupgrade = "^3.19.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
